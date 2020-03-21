@@ -5,10 +5,59 @@
     xmlns:local="using:_8zlp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="80"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Border Background="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="2"/>
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2">
+            <Button Width="80" Height="80" Background="Transparent" BorderThickness="1" Style="{ThemeResource ButtonRevealStyle}">
+                <StackPanel>
+                    <SymbolIcon Height="50" Width="50" Symbol="OpenFile"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="12">打开</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Width="80" Height="80" Background="Transparent" BorderThickness="1" Style="{ThemeResource ButtonRevealStyle}">
+                <StackPanel>
+                    <SymbolIcon Height="50" Width="50" Symbol="NewFolder"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="12">解压</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Width="80" Height="80" Background="Transparent" BorderThickness="1" Style="{ThemeResource ButtonRevealStyle}">
+                <StackPanel>
+                    <SymbolIcon Height="50" Width="50" Symbol="Add"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="12">新建</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Width="80" Height="80" Background="Transparent" BorderThickness="1" Style="{ThemeResource ButtonRevealStyle}">
+                <StackPanel>
+                    <SymbolIcon Height="50" Width="50" Symbol="Accept"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="12">测试</TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Width="80" Height="80" Background="Transparent" BorderThickness="1" Style="{ThemeResource ButtonRevealStyle}">
+                <StackPanel>
+                    <SymbolIcon Height="50" Width="50" Symbol="Find"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="12">查看</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="{ThemeResource SystemControlChromeHighAcrylicWindowMediumBrush}">
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" Padding="10">选定 0 / 1919 个项目</TextBlock>
+            <TextBlock VerticalAlignment="Center" Padding="10">压缩包大小:  1.14MB</TextBlock>
+            <TextBlock VerticalAlignment="Center" Padding="10">(固实压缩, 51.4%)</TextBlock>
+        </StackPanel>
     </Grid>
 </Page>
